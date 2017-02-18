@@ -4,15 +4,15 @@ var AppConstants = require('../constants/AppConstants');
 var _ = require('underscore');
 
 // Define initial data points
-var _chartData = [], _selected = null;
+var _chartData = [];
 
 // Method to load product data from mock API
 function loadProductData(data) {
   _chartData = data[0];
 }
 
-// Extend ProductStore with EventEmitter to add eventing capabilities
-var ProductStore = _.extend({}, EventEmitter.prototype, {
+// Extend AppStore with EventEmitter to add eventing capabilities
+var AppStore = _.extend({}, EventEmitter.prototype, {
 
   // Return Product data
   getChartData: function() {
@@ -53,10 +53,10 @@ AppDispatcher.register(function(payload) {
   }
 
   // If action was responded to, emit change event
-  ProductStore.emitChange();
+  AppStore.emitChange();
 
   return true;
 
 });
 
-module.exports = ProductStore;
+module.exports = AppStore;

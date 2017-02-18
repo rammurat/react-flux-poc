@@ -1,15 +1,11 @@
 var React = require('react');
-var AppActions = require('../actions/AppActions');
 
-// Flux cart view
+// Header view
 var Header = React.createClass({
 
- 
-
-
-  // Render cart view
+  // Render view
   render: function () {
-    var self = this, products = this.props.products;
+    var self = this;
     return (
         <div className="row borderBottom">
             <div className="masthead col-lg-6">

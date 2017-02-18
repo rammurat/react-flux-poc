@@ -1,9 +1,9 @@
 var React = require('react');
 
-// Flux cart view
+// Table view
 var Table = React.createClass({
 
-  // Render cart view
+  // Render table view
   render: function () {
     var self = this;
     return (

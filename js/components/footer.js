@@ -1,10 +1,9 @@
 var React = require('react');
-var AppActions = require('../actions/AppActions');
 
-// Flux cart view
+// Footer view
 var Footer = React.createClass({
 
-  // Render cart view
+  // Render footer view
   render: function () {
     var self = this;
     return (
