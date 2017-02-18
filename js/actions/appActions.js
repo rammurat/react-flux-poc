@@ -10,6 +10,12 @@ var AppActions = {
       actionType: AppConstants.RECEIVE_DATA,
       data: data
     })
+  },
+  loadData: function(data) {
+    AppDispatcher.handleAction({
+      actionType: AppConstants.LOAD_DATA,
+      data: data
+    })
   }
 };
 

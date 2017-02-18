@@ -1,19 +1,16 @@
 window.React = require('react');
-var Data = require('./Data');
-var CartAPI = require('./utils/Api')
-var FrontPage = require('./components/FrontPage');
-var Header = require('./components/Header');
-var Chart = require('./components/PieChart');
-var Footer = require('./components/Footer');
+var Data = require('Data');
+var DataAPI = require('utils/Api')
+var HomeApp = require('components/Home');
 
 // Load Mock Product Data into localStorage
 Data.init();
 
 // Load Mock API Call
-CartAPI.getChartData();
+DataAPI.getChartData();
 
 // Render FluxCartApp Controller View
 React.render(
-  <FrontPage />,
+  <HomeApp />,
   document.getElementById('page-content')
 );

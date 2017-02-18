@@ -1,21 +1,24 @@
 var React = require('react');
 var AppStore = require('../stores/AppStore');
-var FluxProduct = require('./FluxProduct.react');
-var FluxCart = require('./FluxCart.react');
+var Header = require('./Header.js');
+var PieChart = require('./PieChart.js');
+var Table = require('./Table.js');
+var Footer = require('./Footer.js');
+
 
 // Method to retrieve state from Stores
-function getCartState() {
+function getChartData() {
   return {
     product: AppStore.getProduct()
   };
 }
 
 // Define main Controller View
-var FluxCartApp = React.createClass({
+var HomeApp = React.createClass({
 
   // Get initial state from stores
   getInitialState: function() {
-    return getCartState();
+    return getChartData();
   },
 
   // Add change listeners to stores
@@ -31,18 +34,20 @@ var FluxCartApp = React.createClass({
   // Render our child components, passing state via props
   render: function() {
     return (
-      <div className="flux-cart-app">
-        <FluxCart products={this.state.cartItems} count={this.state.cartCount} total={this.state.cartTotal} visible={this.state.cartVisible} />
-        <FluxProduct product={this.state.product} cartitems={this.state.cartItems} selected={this.state.selectedProduct} />
+      <div className="my-app">
+        <Header  />
+        <PieChart products={this.state.product}  />
+        <Table products={this.state.product}  />
+        <Footer  />
       </div>
     );
   },
 
   // Method to setState based upon Store changes
   _onChange: function() {
-    this.setState(getCartState());
+    this.setState(getChartData());
   }
 
 });
 
-module.exports = FluxCartApp;
+module.exports = HomeApp;

@@ -5,18 +5,31 @@
   "main": "js/app.js",
   "dependencies": {
     "flux": "^3.1.2",
+    "keymirror": "^0.1.1",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
+    "uglifyjs": "^2.4.10",
     "underscore": "^1.8.3"
   },
   "scripts": {
     "start": "watchify -o js/bundle.js -v -d .",
-    "build": "browserify . | uglifyjs -cm > js/bundle.min.js"
+    "build": "browserify . | uglifyjs -cm > js/bundle.min.js",
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "browserify": "^14.1.0",
+    "envify": "^4.0.0",
+    "keymirror": "^0.1.1",
+    "react": "^15.4.2",
+    "reactify": "^1.1.1",
     "watchify": "^3.9.0"
+  },
+  "browserify": {
+    "transform": [
+      "reactify",
+      "envify"
+    ]
   }
 }

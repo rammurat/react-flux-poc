@@ -9,7 +9,6 @@ var _product = {}, _selected = null;
 // Method to load product data from mock API
 function loadProductData(data) {
   _product = data[0];
-  _selected = data[0].variants[0];
 }
 
 // Extend ProductStore with EventEmitter to add eventing capabilities
