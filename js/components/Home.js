@@ -1,7 +1,6 @@
 var React = require('react');
 var Render = require('react-dom').render;
 var AppStore = require('../stores/AppStore');
-var AppStore = require('../stores/AppStore');
 
 var Header = require('./Header.js');
 var PieChart = require('./PieChart.js');
@@ -11,7 +10,7 @@ var Footer = require('./Footer.js');
 // Method to retrieve state from Stores
 function getChartData() {
   return {
-    product: AppStore.getProduct()
+    chartData: AppStore.getChartData()
   };
 }
 
@@ -39,8 +38,8 @@ var HomeApp = React.createClass({
       <div className="my-app">
         <Header  />
         <div className="row chart-area">
-            <PieChart products={this.state.product}  />
-            <Table products={this.state.product}  />
+            <PieChart chartData={this.state.chartData}  />
+            <Table chartData={this.state.chartData}  />
         </div>
         <Footer  />
       </div>

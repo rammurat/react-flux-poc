@@ -1,7 +1,6 @@
 module.exports = {
   // Load data into local storage 
   init: function() {
-    localStorage.clear();
     localStorage.setItem('chartData', JSON.stringify([
       {
         title: 'Gaming Consoles Sold in 2016',

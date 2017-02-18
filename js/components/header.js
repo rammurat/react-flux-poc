@@ -19,7 +19,7 @@ var Header = React.createClass({
                 <h3 className="text-muted">React JS POC</h3>
             </div>
             <div className="col-lg-6">
-                <button type="button" className="load-data" onClick={this.loadData}> Load Data </button>
+                <button type="button" className="load-data" onClick={this.loadData}> Load Pie Chart </button>
             </div>
         </div>
     );

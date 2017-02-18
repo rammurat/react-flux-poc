@@ -8,7 +8,7 @@ var Table = React.createClass({
     var self = this;
     return (
         <div className="col-lg-6">
-          <h2>Table</h2>
+          <h2>{this.props.chartData.title}</h2>
           <table className="table"> 
               <thead> 
                 <tr> 
@@ -17,12 +17,16 @@ var Table = React.createClass({
                     <th>Label</th> 
                 </tr>
                 </thead> 
-                <tbody> 
-                    <tr> 
-                        <th scope="row">1</th> 
-                        <td>1000</td>
-                        <td>Label 1</td> 
-                    </tr> 
+                <tbody>
+                    {this.props.chartData.list.map(function (row,index) {
+                    return (
+                        <tr key={++index}> 
+                            <th scope="row">{index}</th> 
+                            <td>{row.y}</td>
+                            <td>{row.indexLabel}</td> 
+                        </tr> 
+                    )
+                    })}
                 </tbody> 
             </table>
         </div>
