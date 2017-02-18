@@ -12,7 +12,7 @@ Data.init();
 DataAPI.getChartData();
 
 // Render FluxCartApp Controller View
-React.render(
+Render(
   <HomePage />,
   document.getElementById('page-content')
 );

@@ -14,9 +14,13 @@ var Header = React.createClass({
   render: function () {
     var self = this, products = this.props.products;
     return (
-        <div className="masthead">
-            <h3 className="text-muted">React JS POC</h3>
-            <button type="button" className="load-data pull-right" onClick={this.loadData}> Load Data </button>
+        <div className="row borderBottom">
+            <div className="masthead col-lg-6">
+                <h3 className="text-muted">React JS POC</h3>
+            </div>
+            <div className="col-lg-6">
+                <button type="button" className="load-data" onClick={this.loadData}> Load Data </button>
+            </div>
         </div>
     );
   }
