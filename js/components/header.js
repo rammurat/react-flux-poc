@@ -4,10 +4,7 @@ var AppActions = require('../actions/AppActions');
 // Flux cart view
 var Header = React.createClass({
 
-  // Show cart via Actions
-  loadData: function () {
-    AppActions.loadData(true);
-  },
+ 
 
 
   // Render cart view
@@ -19,7 +16,7 @@ var Header = React.createClass({
                 <h3 className="text-muted">React JS POC</h3>
             </div>
             <div className="col-lg-6">
-                <button type="button" className="load-data" onClick={this.loadData}> Load Pie Chart </button>
+                
             </div>
         </div>
     );

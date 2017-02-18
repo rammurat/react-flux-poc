@@ -8,7 +8,6 @@ var _chartData = [], _selected = null;
 
 // Method to load product data from mock API
 function loadProductData(data) {
-    console.log(data);
   _chartData = data[0];
 }
 

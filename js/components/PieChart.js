@@ -3,10 +3,12 @@ var AppActions = require('../actions/AppActions');
 
 // Flux cart view
 var PieChart = React.createClass({
-  drawPieChart : function(cnt){
+
+  drawPieChart : function(){
+      
         var chart = new CanvasJS.Chart("chartContainer",{
             title:{
-                text: data.text
+                text: this.props.chartData.title
             },
             legend: {
                 maxWidth: 350,
@@ -16,7 +18,7 @@ var PieChart = React.createClass({
                 type: "pie",
                 showInLegend: true,
                 legendText: "{indexLabel}",
-                dataPoints:data.list
+                dataPoints:this.props.chartData.list
             }]
         });
         chart.render();
@@ -26,8 +28,8 @@ var PieChart = React.createClass({
     var self = this;
     return (
         <div className="col-lg-6">
-          <h2>Pie Chart</h2>
-          <div className="chartArea">
+          <h2>Pie Chart <button type="button" className="load-data pull-right" onClick={this.drawPieChart}> Load Pie Chart </button> </h2>
+          <div id="chartContainer" className="chartArea">
           
           </div>
         </div>

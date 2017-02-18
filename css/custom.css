@@ -10,6 +10,7 @@ body {
 }
 .load-data{
     margin-top: 1em;
+    font-size: 0.5em;
 }
 .chart-area{
     min-height: 200px;
