@@ -11,5 +11,8 @@ npm install
 ###Start server
 npm start
 
+###Install karma  
+npm install -g karma-cli
+
 ###Run main file on browser  
 index.html

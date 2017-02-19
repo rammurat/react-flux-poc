@@ -1,13 +1,13 @@
 var React = require('react');
 
 // Table view
-var Table = React.createClass({
+class Table extends React.Component{
 
   // Render table view
-  render: function () {
+  render() {
     var self = this;
     return (
-        <div className="col-lg-6">
+        <div className="col-lg-6 table-cnt">
           <h2>{this.props.chartData.title}</h2>
           <table className="table"> 
               <thead> 
@@ -33,6 +33,14 @@ var Table = React.createClass({
     );
   }
 
-});
+};
 
-module.exports = Table;    
+
+Table.defaultProps = {
+  chartData: {
+      list : [],
+      title : ''
+  }
+};
+
+module.exports = Table;

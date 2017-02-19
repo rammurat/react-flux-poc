@@ -1,10 +1,11 @@
 var React = require('react');
 
 // Header view
-var Header = React.createClass({
+class Header extends React.Component{
+
 
   // Render view
-  render: function () {
+  render () {
     var self = this;
     return (
         <div className="row borderBottom">
@@ -18,6 +19,6 @@ var Header = React.createClass({
     );
   }
 
-});
+};
 
-module.exports = Header;    
+module.exports = Header;

@@ -1,18 +1,18 @@
 var React = require('react');
 
 // Footer view
-var Footer = React.createClass({
+class Footer extends React.Component{
 
   // Render footer view
-  render: function () {
+  render () {
     var self = this;
     return (
         <footer className="footer">
-            <p>&copy; 2016 Company, Inc.</p>
+            <p className="copyright">&copy; 2016 Company, Inc.</p>
         </footer>
     );
   }
 
-});
+};
 
 module.exports = Footer;    

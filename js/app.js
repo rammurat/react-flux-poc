@@ -4,7 +4,6 @@ var Data = require('./Data');
 var DataAPI = require('./utils/Api')
 var HomePage = require('./components/Home.js');
 
-
 // Load Mock Chart Data into localStorage
 Data.init();
 
