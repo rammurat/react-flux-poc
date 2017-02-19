@@ -14,15 +14,29 @@
   "scripts": {
     "start": "watchify -o js/bundle.js -v -d .",
     "build": "browserify . | uglifyjs -cm > js/bundle.min.js",
-    "test": "jest"
+    "test": "karma start karma.conf.js --single-run --browsers PhantomJS",
+    "test:watch": "karma start --auto-watch"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-preset-airbnb": "^2.2.3",
+    "babelify": "^7.3.0",
     "browserify": "^14.1.0",
     "envify": "^4.0.0",
+    "enzyme": "^2.7.1",
+    "jasmine-core": "^2.5.2",
+    "karma": "^1.4.1",
+    "karma-babel-preprocessor": "^6.0.1",
+    "karma-browserify": "^5.1.1",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-jasmine": "^1.1.0",
+    "karma-phantomjs-launcher": "^1.0.2",
     "keymirror": "^0.1.1",
+    "phantomjs-prebuilt": "^2.1.14",
     "react": "^15.4.2",
+    "react-addons-test-utils": "^15.4.2",
     "reactify": "^1.1.1",
     "watchify": "^3.9.0"
   },
