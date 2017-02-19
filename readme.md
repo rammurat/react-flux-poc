@@ -11,6 +11,5 @@ npm install
 ###Start server
 npm start
 
-###Server starts automatically on localhost 
-http://localhost:3000/
-
+###Run main file on browser  
+index.html
